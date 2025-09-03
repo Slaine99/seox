@@ -166,12 +166,12 @@ const getRecentActivity = async (req, res) => {
         .sort({ createdAt: -1 })
         .limit(isAdmin ? 5 : 10)
         .populate('createdBy', 'firstName lastName')
-        .select('url domain createdAt createdBy status');
+        .select('sourceUrl sourceDomain createdAt createdBy status');
 
       recentBacklinks.forEach(backlink => {
         activities.push({
           type: 'backlink',
-          title: `${isAdmin ? 'New backlink' : 'Your backlink'} from ${backlink.domain || backlink.url}`,
+          title: `${isAdmin ? 'New backlink' : 'Your backlink'} from ${backlink.sourceDomain || backlink.sourceUrl}`,
           user: backlink.createdBy ? `${backlink.createdBy.firstName} ${backlink.createdBy.lastName}` : 'Unknown',
           timestamp: backlink.createdAt,
           status: backlink.status || 'active'
