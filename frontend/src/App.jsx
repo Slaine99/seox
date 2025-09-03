@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import { Toaster } from "react-hot-toast";
 import VerifyEmail from "./pages/VerifyEmail";
 import { AuthProvider, useAuth } from "./context/authContext";
+import { ProfileProvider } from "./context/profileContext";
 import axios from "axios";
 import { baseUrl } from "../apiConfig";
 import LoggedInPage from './pages/LoggedInPage';
