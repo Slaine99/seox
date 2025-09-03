@@ -13,10 +13,6 @@ import { Toaster } from "react-hot-toast";
 import VerifyEmail from "./pages/VerifyEmail";
 import { AuthProvider, useAuth } from "./context/authContext";
 import axios from "axios";
-
-import { ProfileProvider } from "./context/profileContext";
-import { useEffect } from "react";
-import Profile from "./components/Profile";
 import { baseUrl } from "../apiConfig";
 import LoggedInPage from './pages/LoggedInPage';
 import UnderConstruction from './pages/UnderConstruction';
@@ -72,10 +68,7 @@ const router = createBrowserRouter([
         path: "/home",
         element: <LoggedInPage />,
       },
-      {
-        path: "settings",
-        element: <Profile />,
-      },
+  // Removed duplicate /settings route to Profile
       // SEO-X specific routes
       {
         path: "/seo-accounts",

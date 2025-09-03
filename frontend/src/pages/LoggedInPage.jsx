@@ -209,7 +209,7 @@ const LoggedInPage = () => {
       <Nav />
 
       <div className="flex-1 ml-64 p-6">
-        {/* Header with user dropdown */}
+        {/* Header with user dropdown (removed Welcome from here) */}
         <div className="absolute top-4 right-4">
           <div className="relative">
             <button
@@ -219,7 +219,6 @@ const LoggedInPage = () => {
             >
               <UserIcon className="h-5 w-5" />
             </button>
-            
             {showDropdown && (
               <div className="absolute right-0 mt-2 w-56 bg-white border border-gray-200 rounded-md shadow-lg z-10 overflow-hidden">
                 <div className="px-4 py-3 border-b border-gray-100 bg-gray-50">
@@ -227,7 +226,6 @@ const LoggedInPage = () => {
                   <p className="text-xs text-gray-500 truncate">{userDetails?.email || ""}</p>
                   <p className="text-xs text-blue-600 capitalize">{userDetails?.role}</p>
                 </div>
-                
                 <div className="py-1">
                   <Link
                     to="/profile"
@@ -239,7 +237,6 @@ const LoggedInPage = () => {
                     </svg>
                     Settings
                   </Link>
-                  
                   <button
                     onClick={handleLogout}
                     disabled={loggingOut}
@@ -341,22 +338,21 @@ const LoggedInPage = () => {
         ) : (
           <div>
             {/* Header with role-based title */}
-            <div className="flex justify-between items-center mb-8">
-              <div>
-                <h1 className="text-3xl font-bold text-gray-900">
-                  {userDetails?.role === 'Owner' || userDetails?.role === 'Admin' ? 'SEO Agency Dashboard' : 'SEO Dashboard'}
-                </h1>
-                <p className="text-gray-600 mt-1">
-                  {userDetails?.role === 'Owner' && "Manage your SEO agency operations and client accounts"}
-                  {userDetails?.role === 'Admin' && "Oversee all SEO activities and team performance"}
-                  {userDetails?.role === 'Agency' && "Handle client SEO campaigns and content"}
-                  {userDetails?.role === 'Client' && "Track your website's SEO progress and content"}
-                </p>
-              </div>
-              <div className="text-right">
-                <p className="text-sm text-gray-500">Welcome back,</p>
-                <p className="text-lg font-semibold text-gray-900">{firstName}</p>
-              </div>
+            <div className="mb-2">
+              <h1 className="text-3xl font-bold text-gray-900">
+                {userDetails?.role === 'Owner' || userDetails?.role === 'Admin' ? 'SEO Agency Dashboard' : 'SEO Dashboard'}
+              </h1>
+              <p className="text-gray-600 mt-1">
+                {userDetails?.role === 'Owner' && "Manage your SEO agency operations and client accounts"}
+                {userDetails?.role === 'Admin' && "Oversee all SEO activities and team performance"}
+                {userDetails?.role === 'Agency' && "Handle client SEO campaigns and content"}
+                {userDetails?.role === 'Client' && "Track your website's SEO progress and content"}
+              </p>
+            </div>
+            {/* Welcome message moved below the dashboard title/subtitle */}
+            <div className="mb-8">
+              <p className="text-sm text-gray-500">Welcome back,</p>
+              <p className="text-lg font-semibold text-gray-900">{firstName}</p>
             </div>
 
             {/* Key Metrics Dashboard */}
