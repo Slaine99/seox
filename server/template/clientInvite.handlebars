@@ -1,0 +1,147 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #eee;
+    }
+    .header {
+      background: linear-gradient(135deg, #0066cc 0%, #00FFA6 100%);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 8px 8px 0 0;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .header p {
+      margin: 10px 0 0 0;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+    .content {
+      padding: 30px 20px;
+      background: #f9f9f9;
+    }
+    .welcome-box {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .button {
+      display: inline-block;
+      background: linear-gradient(135deg, #0066cc 0%, #00FFA6 100%);
+      color: white;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 20px 0;
+    }
+    .button:hover {
+      opacity: 0.9;
+    }
+    .account-details {
+      background: #e8f4fd;
+      padding: 20px;
+      border-radius: 6px;
+      margin: 20px 0;
+      border-left: 4px solid #0066cc;
+    }
+    .account-details h3 {
+      margin-top: 0;
+      color: #0066cc;
+    }
+    .footer {
+      padding: 20px;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      background: #f5f5f5;
+      border-radius: 0 0 8px 8px;
+    }
+    .footer p {
+      margin: 5px 0;
+    }
+    .security-note {
+      background: #fff3cd;
+      border: 1px solid #ffeaa7;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🚀 Welcome to SEO-X!</h1>
+      <p>Your SEO content management portal</p>
+    </div>
+    
+    <div class="content">
+      <div class="welcome-box">
+        <h2>Hi there! 👋</h2>
+        <p>Great news! <strong>{{inviterName}}</strong> has invited you to join <strong>SEO-X</strong> to access and manage your SEO content.</p>
+        
+        <p>You now have exclusive access to view your blog posts, track content performance, and stay updated on your SEO campaign progress.</p>
+      </div>
+
+      <div class="account-details">
+        <h3>📋 Your SEO Account Details</h3>
+        <p><strong>Account Name:</strong> {{accountName}}</p>
+        <p><strong>Domain:</strong> {{domain}}</p>
+        {{#if monthlyBlogGoal}}
+        <p><strong>Monthly Blog Goal:</strong> {{monthlyBlogGoal}} posts</p>
+        {{/if}}
+      </div>
+
+      <div style="text-align: center;">
+        <a href="{{registrationLink}}" class="button">
+          🔐 Create Your Account & Access Your Content
+        </a>
+      </div>
+
+      <div class="security-note">
+        <strong>🔒 Security Note:</strong> This invitation link is secure and expires in 7 days. If you didn't expect this invitation, please ignore this email.
+      </div>
+
+      <h3>What you'll be able to do:</h3>
+      <ul>
+        <li>📖 <strong>View Your Blog Posts:</strong> Access all published content created for your domain</li>
+        <li>📊 <strong>Track Progress:</strong> Monitor your content publishing schedule and performance</li>
+        <li>🎯 <strong>Stay Updated:</strong> Get notifications when new content is published</li>
+        <li>📈 <strong>View Reports:</strong> See your SEO campaign progress and metrics</li>
+      </ul>
+
+      <p>Once you create your account, you'll have instant access to your personalized dashboard where you can view all your SEO content and campaign progress.</p>
+
+      <p>If you have any questions or need assistance, don't hesitate to reach out to your SEO team.</p>
+    </div>
+    
+    <div class="footer">
+      <p><strong>SEO-X Platform</strong> - Streamlining SEO Content Management</p>
+      <p>This email was sent by {{inviterCompany}} via SEO-X</p>
+      <p style="font-size: 12px; color: #999;">
+        If you no longer wish to receive these emails, you can contact your SEO provider directly.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

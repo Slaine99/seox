@@ -1,0 +1,81 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #eee;
+    }
+    .header {
+      background-color: #0066cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .content {
+      padding: 20px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #0066cc;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>You've Been Invited to Join a Team</h1>
+    </div>
+    <div class="content">
+      <p>Hello {{recipientName}},</p>
+      <p><strong>{{ownerName}}</strong> has invited you to join their team at <strong>{{companyName}}</strong> as a <strong>{{role}}</strong>.</p>
+      
+      <p>As a team member with the <strong>{{role}}</strong> role, you will have access to:</p>
+      {{#if (eq role "Admin")}}
+      <ul>
+        <li>Manage clients and their information</li>
+        <li>Access detailed financial reporting</li>
+        <li>Collaborate with other team members</li>
+      </ul>
+      {{else}}
+      <ul>
+        <li>View financial reports and analytics</li>
+        <li>Access dashboard insights</li>
+      </ul>
+      {{/if}}
+      
+      <p>Click the button below to accept this invitation:</p>
+      <a href="{{inviteLink}}" class="button">Accept Invitation</a>
+      
+      <p>If the button doesn't work, copy and paste this URL into your browser:</p>
+      <p>{{inviteLink}}</p>
+      
+      <p>This invitation will expire in 7 days.</p>
+      
+      <p>If you believe this invitation was sent to you by mistake, you can safely ignore this email.</p>
+      
+      <p>Thank you,<br>Agency X Team</p>
+    </div>
+    <div class="footer">
+      <p>© 2025 Agency X. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

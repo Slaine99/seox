@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loader {
+    animation: spin 1s linear infinite;
+    border-top-color: #FFD700;
+  }
+
+
+  .avatar-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .avatar-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background: black;
+  }
+  
+  .progress-bar {
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 5px;
+    max-width: 100%; /* Ensures it doesn't exceed the container width */
+  }
+  
+  .progress-container {
+    width: 100%; /* The width of the progress bar container */
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  

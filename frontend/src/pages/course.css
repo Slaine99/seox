@@ -1,0 +1,1077 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+
+  margin: 0 auto;
+  min-height: 100vh;
+}
+.full-width-layout {
+  width: 100vw; /* Full width of the viewport */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5vw 1.5vw;
+  gap: 3.5vw;
+  background-color: #fff !important;
+  border: 1px solid #e5e7eb !important;
+  position: relative;
+  overflow: hidden;
+}
+.header-center {
+  flex: 1;
+  display: flex;
+  height: 5vh;
+  max-height: 10vh;
+  align-items: center;
+}
+/* CSS for the logo */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+.Courses {
+  color: #fff;
+  font-size: 35px !important;
+  font-family: arial;
+  padding-left: 10px;
+}
+
+.logo-image {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px; /* Space between logo and text */
+  vertical-align: middle;
+}
+
+/* Container styling */
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 600%; /* Adjust as needed */
+}
+
+/* Input styling */
+.search-bar {
+  width: 100%;
+  padding: 10px 40px 10px 30px; /* Leave space for the icon */
+  font-size: 16px;
+  border-radius: 20px; /* Optional: Rounded corners */
+  border: 1px solid #ccc;
+  background-color: #f8f6ff; /* Light background color */
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Icon styling */
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Position from the left of the container */
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #666; /* Icon color */
+}
+
+/* Container styling */
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* User display styling */
+.user-display {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f8f6ff; /* Light purple background color */
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Rounded corners */
+  box-sizing: border-box;
+}
+
+/* Icon styling */
+.user-icon {
+  margin-right: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Overall Progress Bar Container */
+.overall-progress-bar {
+  position: relative;
+  background-color: #e6e6e6; /* Background of the progress bar */
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 85%;
+  margin: 20px 0;
+}
+
+.overall-progress-bar .progress-bar {
+  background-color: #282350; /* Progress color */
+  height: 100%;
+  text-align: left;
+  font-weight: bold;
+  padding-left: 10px;
+  color: white;
+  line-height: 20px; /* Center text vertically */
+}
+.progress-bar__text {
+  color: #fff;
+}
+
+.session-progress-circles {
+  display: inline-flex; /* Use flexbox to arrange items in a row */
+  justify-content: flex-start; /* Distribute space between circles */
+  align-items: center; /* Align circles vertically in the center */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  white-space: nowrap; /* Prevent wrapping of items */
+  width: calc(5 * 200px + 200px); /* 5 circles + 100px margin */
+}
+
+/* Style for Text inside Circular Progress Bar */
+.progress-circle .CircularProgressbar .CircularProgressbar-text {
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+.course-video-main {
+  width: 100%;
+  height: 40vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+}
+.modules-progress {
+  padding-right: 5vw;
+  width: 95%;
+  color: #000000;
+  padding-top: 5%;
+  font-weight: bold;
+  font-size: larger;
+  margin-top: -80px;
+  margin-left: 20px;
+}
+
+.completed-module {
+  border-left: 4px solid #4caf50;
+}
+
+.completion-check {
+  margin-left: 8px;
+  color: #4caf50;
+}
+
+.locked-module {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.course-completion-badge {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+/* Circular Progress Bar Container */
+.progress-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  width: 120px; /* Adjust size as needed */
+}
+
+.progress-circle p {
+  font-size: 14px;
+  color: var(--accent-color);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.banner {
+  display: flex;
+  background: #282350;
+  padding: 6vh 2vw;
+  color: white;
+  margin-bottom: 4vh;
+  flex-direction: row;
+  gap: 5vw;
+  color: #fff;
+  width: 100%;
+  border-radius: 0;
+  justify-content: space-between; /* Make sure the content is evenly distributed */
+}
+
+.banner > div {
+  flex: 1; /* Ensures both child divs take up equal space */
+  text-align: align-right; /* Center text in each div */
+}
+
+/* Left Section */
+.course-info {
+  font-size: 55x;
+  line-height: 1.5;
+}
+
+.course-title {
+  font-size: 75px;
+}
+.course-subtitle {
+  font-size: 25px;
+  font-style: italic;
+  line-height: 1.8;
+}
+.rating {
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Right Section styles */
+.enroll-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  background-color: #fff;
+  color: black;
+  padding: 2vw; /* Adjust padding for a flexible layout */
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a light shadow for depth */
+  width: 200%;
+}
+.enroll-img {
+  width: 40vw;
+  height: 20vh;
+  border-radius: 10px;
+  margin-bottom: 1vh;
+  object-fit: cover;
+}
+.enroll-title {
+  font-size: 25px;
+  padding: 10px;
+  font-family: sans-serif;
+  font-weight: 700;
+  background-color: rgba(40, 35, 80, 1);
+  color: white;
+  border-radius: 10px;
+}
+.enroll-subtitle {
+  margin-top: 6px;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: arial;
+}
+.enroll-content {
+  padding: 10px;
+}
+.enroll-now-button {
+  margin: auto;
+  background: #282350;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.enroll-now-text {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+.trial-info,
+.share {
+  font-size: 20px !important;
+  text-align: center;
+  font-family: arial;
+}
+.learn-more {
+  font-size: 15px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.cart-section {
+  display: flex;
+  margin: 3vh 0;
+  gap: 4px;
+  align-items: stretch;
+}
+.add-to-cart-button {
+  flex: 1; /* Takes up remaining space */
+  background: #282350;
+  border-radius: 4px;
+  margin-bottom: 1vh;
+  font-size: 14px;
+  font-weight: 700;
+
+  height: 40px;
+}
+.favorite-button {
+  background: #bbbbbb;
+  border: 1px solid #888888;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px; /* This padding should be adjusted as needed */
+  height: 40px; /* Make sure both buttons have the same height */
+  margin-bottom: 10px;
+}
+
+.favorite-button.active .favorite-text {
+  color: red;
+}
+.favorite-text {
+  color: gray;
+  font-size: 40px;
+}
+.favorite-button:hover .favorite-text {
+  color: red;
+}
+.favorite-button.active .favorite-text {
+  color: red;
+}
+
+/* General icon styling */
+.icon {
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  position: relative; /* Necessary for badge positioning */
+}
+
+/* Badge styling for notification count */
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 20px;
+  text-align: center;
+  line-height: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown container */
+.notification-dropdown {
+  position: absolute;
+  top: 50px; /* Adjust based on the icon size */
+  right: 50px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Individual notification items */
+.notification-item {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.notification-item:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+/* Message for no notifications */
+.no-notifications {
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Optional: Add subtle animation for the dropdown */
+.notification-dropdown {
+  animation: dropdownFade 0.3s ease-in-out;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.share-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 1vh 0;
+}
+.share,
+.gift,
+.apply-coupon {
+  font-size: 20px;
+  cursor: pointer;
+  font-family: arial;
+}
+
+.coupon-section {
+  display: flex;
+}
+.coupon-box {
+  height: 37px;
+  background: #d9d9d9;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 4px;
+}
+.apply-button {
+  margin-left: 10px;
+  background: #282350;
+  color: white;
+  border-radius: 4px;
+  padding: 0 5px;
+  border: none;
+}
+
+.modules {
+  padding-right: 20vw;
+  width: 80%;
+  align-items: left;
+  font-family: Arial, sans-serif;
+  margin: 2vh;
+  color: #333;
+}
+
+.module-button {
+  text-decoration: none; /* Ensure there's no default underline */
+  position: relative; /* To create a position context for the underline */
+}
+
+.module-button:hover {
+  text-decoration: none; /* Remove default underline */
+}
+
+.module-button:hover::after {
+  content: ""; /* This creates the underline */
+  position: absolute;
+  bottom: 0; /* Position the line at the bottom of the button */
+  left: 0;
+  width: 100%; /* Makes the underline span the full width of the button */
+  height: 2px; /* Adjust the thickness of the line */
+  background-color: #000; /* Color of the underline (you can change this) */
+}
+
+.module-header-middle {
+  display: flex !important;
+  justify-content: flex-end !important; /* Aligns the content to the right */
+  width: 100% !important; /* Takes the full width of the container */
+  margin-top: -26px;
+  background-color: #fff !important;
+  padding-bottom: 10px;
+}
+.module-header-middle p {
+  font-size: small;
+}
+.module-button {
+  font-size: 15px;
+  font-weight: bold;
+  color: #282350;
+  align-items: right;
+}
+.sessions {
+  border-top: 1px solid #ccc;
+  margin-top: 1vh;
+}
+.session-item {
+  display: flex;
+  padding-left: 0.5vw;
+  justify-content: space-between; /* Align title on the left and details on the right */
+  align-items: center;
+  border: 1px solid #ddd; /* Border around each session item */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  background-color: #f9f9f9; /* Light background color for contrast */
+}
+.session-details {
+  padding: 1vh 1.5vw;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.session-details:hover {
+  background-color: #f5f5f5;
+}
+
+.session-details-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-module-link {
+  color: #282350;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.session-details:hover .view-module-link {
+  text-decoration: underline;
+}
+.session-title {
+  font-weight: bold;
+  font-size: medium;
+  cursor: pointer;
+}
+.session-description {
+  color: #555; /* Slightly darker color for description */
+}
+.session-toggle {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: auto;
+  font-weight: bold;
+  padding: 5px;
+  text-align: left;
+  width: 100%;
+}
+.session-description {
+  padding-left: 2.5vw;
+  font-size: 14px;
+  color: #666;
+}
+.show-more {
+  width: 100%;
+  margin-top: 1vh;
+  padding: 1vh;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 14px;
+}
+.footer-links {
+  cursor: pointer; /* Makes the cursor appear clickable */
+}
+
+.footer-links p {
+  text-decoration: none; /* Remove the underline by default */
+  transition: text-decoration 0.3s ease; /* Adds smooth transition for underline effect */
+}
+
+.footer-links p:hover {
+  text-decoration: underline; /* Apply the underline only on hover */
+}
+
+.footer {
+  background-color: #1b1140;
+  color: white;
+  padding: 1rem 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  text-align: left;
+  gap: 1rem; /* Space between footer sections */
+}
+
+.footer-top {
+  margin-bottom: 1rem;
+}
+
+.footer-text-bold {
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  margin: 0.5rem 0;
+}
+
+.footer-text {
+  font-size: 15px;
+  color: white;
+}
+
+/* Ensure footer-links appear below footer-top with vertical alignment */
+.footer-links {
+  display: flex;
+  flex-direction: row; /* Align columns in a row */
+  gap: 2rem;
+  width: 100%; /* Take full width to align with other sections */
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.footer-column p {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Ensure it aligns with the width of other sections */
+  padding-top: 1rem;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+}
+
+.footer-language {
+  display: flex;
+  align-items: center;
+}
+
+.footer-language i {
+  margin-right: 5px;
+}
+.favorite-container {
+  position: relative; /* Sets relative positioning for the dropdown to align correctly */
+  overflow: visible; /* Ensures that child elements can overflow */
+  z-index: 1000; /* Elevates this container above other elements */
+}
+
+/* cart*/
+.cart-container,
+.favorite-container {
+  position: relative;
+}
+
+.cart-dropdown,
+.favorite-dropdown {
+  position: absolute;
+  top: 0%; /* Push dropdown further below the heart icon */
+  margin-right: 20px;
+  right: 0; /* Align to the right of the container */
+  background: white; /* Background color for the dropdown */
+  border: 1px solid #ddd; /* Light border for visibility */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  width: 250px; /* Fixed width for consistent design */
+  max-height: 200px; /* Limit height */
+  overflow-y: auto; /* Enable scrolling for overflow */
+  z-index: 1000; /* Ensure it appears above other content */
+  padding: 10px; /* Add padding inside the dropdown */
+  height: 50px;
+}
+
+.no-favorites {
+  text-align: center;
+  color: #888;
+  font-size: 0.9em;
+  padding: 10px; /* Add spacing for better visibility */
+}
+
+.favorite-container .icon {
+  transition: color 0.3s ease;
+}
+
+.favorite-container .icon:hover {
+  color: red; /* Change color on hover */
+}
+
+.favorite-container .favorite-active {
+  color: red; /* Change color when active */
+}
+/* Favorite Dropdown */
+
+.favorite-item {
+  padding: 5px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.favorite-item:last-child {
+  border-bottom: none;
+}
+
+.favorite-badge {
+  background-color: red;
+  color: white;
+  font-size: 0.8em;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+.no-favorites {
+  text-align: center;
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 1em; /* Space below the message */
+  position: relative; /* Positioning */
+  overflow: hidden; /* Ensures content doesn't overflow */
+  white-space: nowrap; /* Prevents text wrapping */
+  text-overflow: ellipsis; /* Adds '...' when text overflows */
+  max-width: 100%; /* Restrict width to container size */
+}
+.favorite-item:last-child {
+  border-bottom: none;
+}
+
+.share,
+.gift {
+  cursor: pointer; /* Makes the cursor appear clickable */
+}
+
+.share,
+.gift {
+  text-decoration: none; /* Remove the underline by default */
+  transition: text-decoration 0.3s ease; /* Adds smooth transition for underline effect */
+}
+
+.share:hover,
+.gift:hover {
+  text-decoration: underline; /* Apply the underline only on hover */
+}
+
+.session-details {
+  cursor: pointer;
+}
+
+.session-details-content {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #3c0a45; /* Dark color for the text */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for text color and transform */
+}
+
+.session-details-content:hover {
+  color: #5b0f77; /* Change text color on hover */
+  transform: translateX(
+    5px
+  ); /* Slightly move the text and arrow to the right */
+}
+
+.session-details-content .view-module-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none; /* Remove underline */
+}
+
+.view-module-link i {
+  font-size: 18px;
+  margin-left: 8px; /* Space between the text and the arrow */
+  transition: transform 0.3s ease; /* Smooth transition for the arrow */
+}
+
+.session-details-content:hover .view-module-link i {
+  transform: translateX(
+    5px
+  ); /* Move the arrow slightly to the right when hovering */
+}
+
+/*close expand*/
+.module-button {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #1b1140;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.module-button:hover {
+  background-color: #1b1140;
+}
+
+.session-item {
+  margin-bottom: 10px;
+}
+
+.session-header {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.session-details-content {
+  font-size: 14px;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.session-details {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.session-details-content:hover {
+  text-decoration: underline;
+}
+
+/* Media Query for Small Screens */
+/* General Styling for Mobile */
+@media (max-width: 768px) {
+  .enroll-subtitle {
+    font-size: 20px;
+  }
+  .module-header-middle {
+    padding-top: 40px;
+  }
+  .session-title,
+  .session-description,
+  .view-module-link {
+    font-size: 12px;
+  }
+  .notification-dropdown {
+    width: 200px; /* Reduce width for smaller screens */
+  }
+
+  .icon {
+    font-size: 20px; /* Adjust icon size */
+  }
+  .course-video-main {
+    height: 30vh;
+  }
+  /* Header Adjustments */
+  .header {
+    flex-direction: row; /* Align items in a row */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  .header-center, /* Target search container */
+  .cart-container, /* Target cart icon */
+  .favorite-container, /* Target favorite icon */
+  .notification-container, /* Target notification icon */
+  .search-container, .rating {
+    /* Target search bar */
+    display: none; /* Hide on mobile */
+  }
+
+  .logo-image {
+    width: 80px; /* Reduce the logo size for mobile */
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+  }
+
+  .user-display {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+  }
+
+  /* Banner Adjustments */
+  .banner {
+    flex-direction: column; /* Stack banner sections vertically */
+    align-items: center;
+    padding: 20px;
+  }
+  .trial-info,
+  .share {
+    font-size: 18px !important;
+  }
+
+  .course-info {
+    text-align: center; /* Center align all contents within course-info */
+    padding: 10px;
+  }
+
+  .course-title {
+    font-size: 2em; /* Adjust title for mobile readability */
+  }
+
+  .course-subtitle {
+    font-size: 1.1em;
+    margin-bottom: 15px; /* Add space below the subtitle */
+  }
+
+  /* Enroll Section Adjustments */
+  .enroll-section {
+    width: 90%; /* Center-align and reduce width */
+    margin-top: 15px;
+  }
+
+  .enroll-img {
+    width: 80%; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* .enroll-title {
+    font-size: 20px;
+    padding: 8px;
+  } */
+
+  .button-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important; /* Space between the enroll button and the cart section */
+    justify-content: center !important; /* Center align the buttons */
+    margin-top: 10px !important;
+  }
+
+  .enroll-now-button {
+    background: #282350;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px; /* This padding should be adjusted as needed */
+    height: 40px; /* Make sure both buttons have the same height */
+  }
+
+  /* Modules Progress Tracker Adjustments */
+  .modules-progress {
+    width: 90%; /* Reduce width for mobile */
+    padding: 15px 0;
+    margin-top: 1px;
+  }
+
+  .overall-progress-bar {
+    width: 100%; /* Full-width progress bar */
+    height: 15px;
+  }
+
+  .progress-text {
+    width: 200px; /* adjust width */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Footer Adjustments */
+  .footer {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-links {
+    flex-direction: column; /* Stack footer links vertically */
+    gap: 10px;
+  }
+
+  .footer-column {
+    align-items: center;
+  }
+}
+.scrollable-container {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping */
+  padding: 10px 0;
+}
+
+.scrollable-container::-webkit-scrollbar {
+  height: 8px; /* Make the scrollbar smaller for mobile */
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background-color: darkgrey; /* Customize the color of the scrollbar */
+  border-radius: 4px; /* Round scrollbar edges */
+}
+
+.progress-circle {
+  min-width: 90px; /* Ensure each circle has a minimum width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px; /* Add spacing between circles */
+}
+
+.modules {
+  width: 95%; /* Increase width for mobile view */
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.session-item {
+  padding-left: 10px; /* Adjust padding for better alignment */
+  padding-right: 10px;
+}
+@media (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+  .modules-progress {
+    margin-top: -40px;
+  }
+  .user-display {
+    margin-right: 10px;
+  }
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #4caf50;
+  border-radius: 5px;
+  max-width: 100%; /* Ensures it doesn't exceed the container width */
+}
+
+.progress-container {
+  width: 100%; /* The width of the progress bar container */
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}

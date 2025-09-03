@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&display=swap');
+
+body{
+  font-family: 'Archivo', sans-serif;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.avatar-controls {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.avatar-video {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  background-color: black;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #4caf50;
+  border-radius: 5px;
+  max-width: 100%; /* Ensures it doesn't exceed the container width */
+}
+
+.progress-container {
+  width: 100%; /* The width of the progress bar container */
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
