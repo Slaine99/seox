@@ -6,10 +6,10 @@ if (import.meta.env.VITE_NODE_ENV === "production") {
   socketUrl = "wss://simple-chat-app-6yeb.onrender.com";
 } else {
 
-  // baseUrl = "http://165.22.6.221:4000";
-  // socketUrl = "ws://165.22.6.221:4000";
-  baseUrl = "http://localhost:4000";
-  socketUrl = "ws://localhost:4000";
+  // baseUrl = "http://165.22.6.221:4001";
+  // socketUrl = "ws://165.22.6.221:4001";
+  baseUrl = "http://localhost:4001";
+  socketUrl = "ws://localhost:4001";
 }
 
 export { baseUrl, socketUrl };

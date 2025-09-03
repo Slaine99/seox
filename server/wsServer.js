@@ -271,7 +271,7 @@ const transcribeAudio = async (audioBuffer) => {
 
 const getGPTResponse = async (message) => {
   try {
-    const response = await axios.post("http://localhost:4000/api/gpt/gpt", {
+    const response = await axios.post("http://localhost:4001/api/gpt/gpt", {
       message,
     });
     return response.data.response;

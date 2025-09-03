@@ -34,12 +34,12 @@ app.use(cookieParser());
 const allowedOrigins = [
   "http://localhost:5174",
   "http://137.184.3.111:5174",
-  "http://137.184.3.111:4000",
+  "http://137.184.3.111:4001",
   "http://64.227.96.162:5174",
-  "http://64.227.96.162:4000",
+  "http://64.227.96.162:4001",
   "https://app.agencyoverview.io",  // Add this
   "http://app.agencyoverview.io"  ,  // Add this
-  "http://localhost:4000",
+  "http://localhost:4001",
 ];
 
 const storage = multer.diskStorage({
@@ -117,7 +117,7 @@ app.get('/*', (req, res) => {
   });
 });
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 4001;
 const server = app.listen(port, () => console.log(`Application Running on Port ${port}`));
 
 module.exports = app;
